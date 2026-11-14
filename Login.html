@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f8ff">
+    <meta name="description" content="Log in to your Jobtaria account.">
+    <title>Log in — Jobtaria</title>
+    <link rel="icon" type="image/png" href="/asset/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="login-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Jobtaria home">
+          <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="job.html">Jobs</a>
+          <a class="nav-link" href="Saved-jobs.html">Saved jobs</a>
+          <a class="nav-link" href="My%20Applcation.html">My applications</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path></svg>
+          </button>
+          <a class="login-link active" href="Login.html" aria-current="page">Log in</a>
+          <a class="button button-dark button-small" href="sign%20up.html">Sign up</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <section class="login-section">
+        <div class="container login-container">
+          <h1>Log in</h1>
+          <form class="login-form" id="login-form">
+            <label for="login-email">Email
+              <input id="login-email" name="email" type="email" autocomplete="email" required>
+            </label>
+            <label for="login-password">Password
+              <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+            </label>
+            <button class="button button-dark" type="submit">Log in</button>
+            <p class="login-message" id="login-message" role="status" aria-live="polite"></p>
+            <p class="login-signup">New to Jobtaria? <a href="sign%20up.html">Create an account</a></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-about">
+            <a class="brand footer-brand" href="index.html" aria-label="Jobtaria home">
+              <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+            </a>
+            <p>A simpler way to find your next opportunity and keep your job search moving.</p>
+          </div>
+          <div class="footer-column">
+            <h2>Explore</h2>
+            <a href="job.html">Find jobs</a>
+            <a href="Saved-jobs.html">Saved jobs</a>
+            <a href="My%20Applcation.html">My applications</a>
+          </div>
+          <div class="footer-column">
+            <h2>Jobtaria</h2>
+            <a href="index.html">About us</a>
+            <a href="index.html">Career advice</a>
+            <a href="mailto:hello@jobtaria.com">Contact</a>
+          </div>
+          <div class="footer-column footer-newsletter">
+            <h2>Keep moving forward</h2>
+            <p>Great opportunities look good on you. Keep an eye out for yours.</p>
+            <a class="footer-email" href="mailto:hello@jobtaria.com">hello@jobtaria.com <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Jobtaria. Made for your next chapter.</p>
+          <div><a href="index.html">Privacy</a><a href="index.html">Terms</a><a href="#" class="back-to-top">Back to top ↑</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

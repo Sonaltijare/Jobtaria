@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f8ff">
+    <meta name="description" content="Browse jobs on Jobtaria and filter opportunities by location, role, and experience.">
+    <title>Find your next job — Jobtaria</title>
+    <link rel="icon" type="image/png" href="/asset/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body id="top" class="job-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Jobtaria home">
+          <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="#latest-jobs" aria-current="page">Jobs</a>
+          <a class="nav-link" href="Saved-jobs.html">Saved jobs</a>
+          <a class="nav-link" href="My%20Applcation.html">My applications</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path></svg>
+          </button>
+          <a class="login-link" href="Login.html">Log in</a>
+          <a class="button button-dark button-small" href="sign%20up.html">Sign up</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="directory-section" id="latest-jobs">
+        <div class="container directory-container">
+          <div class="directory-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-mark">✦</span> A better way to job search</p>
+              <h1>Find your next job</h1>
+              <p class="directory-subtitle">Explore thoughtful opportunities from teams ready to meet you.</p>
+            </div>
+            <a class="directory-back-link" href="index.html"><span aria-hidden="true">←</span> Back home</a>
+          </div>
+          <div class="directory-layout">
+            <form class="filter-panel" id="job-search">
+              <div class="filter-field">
+                <label for="job-query">Keyword</label>
+                <input id="job-query" name="query" type="search" placeholder="Title, company or skill">
+              </div>
+              <div class="filter-field">
+                <label for="job-location">Location</label>
+                <select id="job-location" name="location">
+                  <option value="">All locations</option>
+                  <option value="pune">Pune</option>
+                  <option value="remote">Remote</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="chennai">Chennai</option>
+                  <option value="bengaluru">Bengaluru</option>
+                  <option value="mumbai">Mumbai</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="job-type">Job type</label>
+                <select id="job-type" name="type">
+                  <option value="">All types</option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                  <option value="contract">Contract</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="job-experience">Experience</label>
+                <select id="job-experience" name="experience">
+                  <option value="">Any experience</option>
+                  <option value="fresher">Fresher</option>
+                  <option value="1-3">1–3 years</option>
+                  <option value="3-5">3–5 years</option>
+                  <option value="5+">5+ years</option>
+                </select>
+              </div>
+              <div class="filter-field salary-filter">
+                <label for="job-salary">Minimum salary: <span id="salary-value">₹0 LPA</span></label>
+                <input id="job-salary" name="salary" type="range" min="0" max="30" step="1" value="0">
+              </div>
+              <button class="button button-outline reset-filters" type="reset">Reset filters</button>
+            </form>
+
+            <div class="results-column">
+              <div class="results-toolbar">
+                <p id="results-count" aria-live="polite">12 jobs found</p>
+                <label for="job-sort">Sort by
+                  <select id="job-sort" name="sort">
+                    <option value="newest">Newest</option>
+                    <option value="salary-high">Salary: high to low</option>
+                    <option value="salary-low">Salary: low to high</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="listing-grid" id="job-grid">
+                <article class="job-card listing-card" data-title="Frontend Developer" data-location="pune" data-tags="frontend developer react javascript full-time fresher">
+                  <div class="listing-card-heading"><div><h2>Frontend Developer</h2><p class="listing-company">Acme Labs, Pune</p></div><button class="save-button" type="button" aria-label="Save Frontend Developer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Build responsive interfaces for products people love.</p>
+                  <div class="job-tags"><span>Full-time</span><span>Fresher</span><span>₹6 LPA</span></div>
+                  <div class="listing-skills"><span>React</span><span>JavaScript</span><span>CSS</span></div>
+                  <a class="listing-details" href="Job-details.html?job=frontend-developer">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="fresher" data-salary="6" data-date="13"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Customer Success Associate" data-location="pune" data-tags="customer success associate helpdesk pro support communication crm full-time fresher">
+                  <div class="listing-card-heading"><div><h2>Customer Success Associate</h2><p class="listing-company">Helpdesk Pro, Pune</p></div><button class="save-button" type="button" aria-label="Save Customer Success Associate job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Help customers get the most from our software.</p>
+                  <div class="job-tags"><span>Full-time</span><span>1–3 years</span><span>₹7 LPA</span></div>
+                  <div class="listing-skills"><span>Support</span><span>Communication</span><span>CRM</span></div>
+                  <a class="listing-details" href="Job-details.html?job=customer-success-associate">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="1-3" data-salary="7" data-date="12"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Content Writer" data-location="remote" data-tags="content writer writing seo editing part-time fresher">
+                  <div class="listing-card-heading"><div><h2>Content Writer</h2><p class="listing-company">Wordcraft, Remote</p></div><button class="save-button" type="button" aria-label="Save Content Writer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Write blogs and website copy for tech clients.</p>
+                  <div class="job-tags"><span>Part-time</span><span>Fresher</span><span>₹3 LPA</span></div>
+                  <div class="listing-skills"><span>Writing</span><span>SEO</span><span>Editing</span></div>
+                  <a class="listing-details" href="Job-details.html?job=content-writer">View details</a>
+                  <span class="listing-sorting-data" data-type="part-time" data-experience="fresher" data-salary="3" data-date="11"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Mobile App Developer" data-location="bengaluru" data-tags="mobile app developer flutter firebase apis full-time 3-5 years">
+                  <div class="listing-card-heading"><div><h2>Mobile App Developer</h2><p class="listing-company">Appify, Bengaluru</p></div><button class="save-button" type="button" aria-label="Save Mobile App Developer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Ship polished Android and iOS apps.</p>
+                  <div class="job-tags"><span>Full-time</span><span>3–5 years</span><span>₹22 LPA</span></div>
+                  <div class="listing-skills"><span>Flutter</span><span>Firebase</span><span>APIs</span></div>
+                  <a class="listing-details" href="Job-details.html?job=mobile-app-developer">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="3-5" data-salary="22" data-date="10"></span>
+                </article>
+                <article class="job-card listing-card" data-title="HR Executive" data-location="delhi" data-tags="hr executive recruitment communication excel full-time fresher">
+                  <div class="listing-card-heading"><div><h2>HR Executive</h2><p class="listing-company">PeopleFirst, Delhi</p></div><button class="save-button" type="button" aria-label="Save HR Executive job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Source, screen, and onboard new team members.</p>
+                  <div class="job-tags"><span>Full-time</span><span>Fresher</span><span>₹4 LPA</span></div>
+                  <div class="listing-skills"><span>Recruitment</span><span>Communication</span><span>Excel</span></div>
+                  <a class="listing-details" href="Job-details.html?job=hr-executive">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="fresher" data-salary="4" data-date="9"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Python Developer" data-location="remote" data-tags="python developer data analyst remote backend full-time 3-5 years">
+                  <div class="listing-card-heading"><div><h2>Python Developer</h2><p class="listing-company">Datanest, Remote</p></div><button class="save-button" type="button" aria-label="Save Python Developer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Develop data-driven features and internal tools.</p>
+                  <div class="job-tags"><span>Full-time</span><span>3–5 years</span><span>₹18 LPA</span></div>
+                  <div class="listing-skills"><span>Python</span><span>Data</span><span>APIs</span></div>
+                  <a class="listing-details" href="Job-details.html?job=python-developer">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="3-5" data-salary="18" data-date="8"></span>
+                </article>
+                <article class="job-card listing-card" data-title="QA Engineer" data-location="chennai" data-tags="qa engineer quality assurance testing automation full-time 1-3 years">
+                  <div class="listing-card-heading"><div><h2>QA Engineer</h2><p class="listing-company">Testwise, Chennai</p></div><button class="save-button" type="button" aria-label="Save QA Engineer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Keep our releases fast, reliable, and bug-free.</p>
+                  <div class="job-tags"><span>Full-time</span><span>1–3 years</span><span>₹8 LPA</span></div>
+                  <div class="listing-skills"><span>Testing</span><span>Automation</span><span>QA</span></div>
+                  <a class="listing-details" href="Job-details.html?job=qa-engineer">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="1-3" data-salary="8" data-date="7"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Product Designer" data-location="mumbai" data-tags="product designer ui ux design figma full-time 1-3 years">
+                  <div class="listing-card-heading"><div><h2>Product Designer</h2><p class="listing-company">Brightside, Mumbai</p></div><button class="save-button" type="button" aria-label="Save Product Designer job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Turn complex workflows into delightful experiences.</p>
+                  <div class="job-tags"><span>Full-time</span><span>1–3 years</span><span>₹12 LPA</span></div>
+                  <div class="listing-skills"><span>Figma</span><span>Product</span><span>UX</span></div>
+                  <a class="listing-details" href="Job-details.html?job=product-designer">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="1-3" data-salary="12" data-date="6"></span>
+                </article>
+                <article class="job-card listing-card" data-title="Data Analyst" data-location="pune" data-tags="data analyst sql excel analytics full-time fresher">
+                  <div class="listing-card-heading"><div><h2>Data Analyst</h2><p class="listing-company">Northwind Labs, Pune</p></div><button class="save-button" type="button" aria-label="Save Data Analyst job" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-4-6 4z"></path></svg></button></div>
+                  <p class="job-summary">Find useful patterns and share clear insights.</p>
+                  <div class="job-tags"><span>Full-time</span><span>Fresher</span><span>₹6 LPA</span></div>
+                  <div class="listing-skills"><span>SQL</span><span>Excel</span><span>Analytics</span></div>
+                  <a class="listing-details" href="Job-details.html?job=data-analyst">View details</a>
+                  <span class="listing-sorting-data" data-type="full-time" data-experience="fresher" data-salary="6" data-date="5"></span>
+                </article>
+              </div>
+              <p class="empty-state" id="empty-state" hidden>No jobs match your search yet. Try another filter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="application-tracker">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-about">
+            <a class="brand footer-brand" href="index.html" aria-label="Jobtaria home">
+              <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+            </a>
+            <p>A simpler way to find your next opportunity and keep your job search moving.</p>
+          </div>
+          <div class="footer-column">
+            <h2>Explore</h2>
+            <a href="#latest-jobs">Find jobs</a>
+            <a href="Saved-jobs.html">Saved jobs</a>
+            <a href="My%20Applcation.html">My applications</a>
+          </div>
+          <div class="footer-column">
+            <h2>Jobtaria</h2>
+            <a href="index.html">About us</a>
+            <a href="index.html">Career advice</a>
+            <a href="mailto:hello@jobtaria.com">Contact</a>
+          </div>
+          <div class="footer-column footer-newsletter">
+            <h2>Keep moving forward</h2>
+            <p>Great opportunities look good on you. Keep an eye out for yours.</p>
+            <a class="footer-email" href="mailto:hello@jobtaria.com">hello@jobtaria.com <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Jobtaria. Made for your next chapter.</p>
+          <div><a href="#application-tracker">Privacy</a><a href="#application-tracker">Terms</a><a href="#top" class="back-to-top">Back to top ↑</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

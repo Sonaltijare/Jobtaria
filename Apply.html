@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f8ff">
+    <meta name="description" content="Apply for a job with Jobtaria.">
+    <title>Apply for a job — Jobtaria</title>
+    <link rel="icon" type="image/png" href="/asset/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="apply-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Jobtaria home">
+          <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="job.html" aria-current="page">Jobs</a>
+          <a class="nav-link" href="Saved-jobs.html">Saved jobs</a>
+          <a class="nav-link" href="My%20Applcation.html">My applications</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path></svg>
+          </button>
+          <a class="login-link" href="Login.html">Log in</a>
+          <a class="button button-dark button-small" href="sign%20up.html">Sign up</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="application-section">
+        <div class="container application-container">
+          <h1 id="application-heading">Apply for a job</h1>
+          <form class="application-form" id="application-form">
+            <label for="applicant-name">Full name
+              <input id="applicant-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+            </label>
+            <label for="applicant-email">Email
+              <input id="applicant-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+            <label for="applicant-phone">Phone (10 digits)
+              <input id="applicant-phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit phone number" required>
+            </label>
+            <label for="applicant-resume">Resume (PDF or Word, max 2 MB)
+              <input id="applicant-resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+            </label>
+            <label for="applicant-cover-note">Cover note (optional)
+              <textarea id="applicant-cover-note" name="coverNote" rows="3" placeholder="Share a short note with the hiring team"></textarea>
+            </label>
+            <button class="button button-dark" type="submit">Submit application</button>
+            <p class="application-message" id="application-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f8ff">
+    <meta name="description" content="Explore the role, requirements, and application details for this Jobtaria opportunity.">
+    <title>Job details — Jobtaria</title>
+    <link rel="icon" type="image/png" href="/asset/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="job-details-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Jobtaria home">
+          <img class="brand-logo" src="asset/icons/jobtaria-logo.png" alt="">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="job.html" aria-current="page">Jobs</a>
+          <a class="nav-link" href="Saved-jobs.html">Saved jobs</a>
+          <a class="nav-link" href="My%20Applcation.html">My applications</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path></svg>
+          </button>
+          <a class="login-link" href="Login.html">Log in</a>
+          <a class="button button-dark button-small" href="sign%20up.html">Sign up</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="job-detail-main">
+      <section class="job-detail-section">
+        <div class="container job-detail-container">
+          <a class="job-detail-back" href="job.html">Back to all jobs</a>
+          <div class="job-detail-layout" id="job-detail">
+            <div class="job-detail-copy">
+              <p class="job-detail-company" id="detail-company"></p>
+              <h1 id="detail-title">Loading job…</h1>
+              <p class="job-detail-location" id="detail-location"></p>
+              <section class="job-detail-section-block">
+                <h2>About the role</h2>
+                <p id="detail-about"></p>
+              </section>
+              <section class="job-detail-section-block">
+                <h2>Responsibilities</h2>
+                <ul id="detail-responsibilities"></ul>
+              </section>
+              <section class="job-detail-section-block">
+                <h2>Requirements</h2>
+                <ul id="detail-requirements"></ul>
+              </section>
+            </div>
+            <aside class="job-overview" aria-labelledby="job-overview-title">
+              <h2 id="job-overview-title">Job overview</h2>
+              <dl>
+                <div><dt>Location</dt><dd id="overview-location"></dd></div>
+                <div><dt>Job type</dt><dd id="overview-type"></dd></div>
+                <div><dt>Experience</dt><dd id="overview-experience"></dd></div>
+                <div><dt>Salary</dt><dd id="overview-salary"></dd></div>
+              </dl>
+              <a class="button button-dark job-detail-apply" id="detail-apply">Apply now</a>
+              <button class="button button-outline job-detail-save" id="detail-save" type="button" aria-pressed="false">Save job</button>
+            </aside>
+          </div>
+          <p class="job-detail-not-found" id="detail-not-found" hidden>We couldn't find that job. <a href="job.html">Browse all jobs</a>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
